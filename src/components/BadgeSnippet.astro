@@ -12,9 +12,11 @@ const { entry } = Astro.props;
 import { url } from "@/utils/url";
 
 const badgeUrl = url(`/badges/${entry.slug}.svg`);
-const galleryPageUrl = `https://clement-joye.github.io/Leit-Gallery/gallery/${entry.slug}/`;
-const markdownSnippet = `[![Hear ${entry.name}](${galleryPageUrl.replace(`/gallery/${entry.slug}/`, badgeUrl)})](${galleryPageUrl})`;
-const htmlSnippet = `<a href="${galleryPageUrl}"><img src="${galleryPageUrl.replace(`/gallery/${entry.slug}/`, badgeUrl)}" alt="Hear ${entry.name}" /></a>`;
+const siteBase = `${import.meta.env.SITE}${import.meta.env.BASE_URL}`;
+const absoluteBadgeUrl = `${siteBase}/badges/${entry.slug}.svg`;
+const galleryPageUrl = `${siteBase}/gallery/${entry.slug}/`;
+const markdownSnippet = `[![Hear ${entry.name}](${absoluteBadgeUrl})](${galleryPageUrl})`;
+const htmlSnippet = `<a href="${galleryPageUrl}"><img src="${absoluteBadgeUrl}" alt="Hear ${entry.name}" /></a>`;
 ---
 
 <section class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
