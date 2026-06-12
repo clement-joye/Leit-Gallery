@@ -1,0 +1,86 @@
+{
+  "seed": "b194d85f76781d3a5c39b4566d262f1855cd3f595208955b4800507d1567a863",
+  "tempo": 102,
+  "key": "F",
+  "scale": "minor",
+  "motif": [
+    65,
+    63,
+    58,
+    65,
+    63,
+    58,
+    58,
+    55,
+    51
+  ],
+  "chord_progression": [
+    "Fm",
+    "A#m",
+    "Cm",
+    "Fm"
+  ],
+  "rhythm_pattern": [
+    1.5,
+    0.5,
+    0.5,
+    2.0,
+    1.5,
+    0.5,
+    0.5,
+    2.0,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    0.5,
+    0.25
+  ],
+  "instrumentation": [
+    "synth_lead",
+    "synth_bass",
+    "pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "techno",
+    "secondary": "electronic",
+    "alternates": [
+      "industrial",
+      "house",
+      "synthwave"
+    ],
+    "energy": 0.5016,
+    "synthetic_ratio": 0.871,
+    "groove_complexity": 0.7241,
+    "mix_brightness": 0.4827
+  },
+  "tension_score": 0.6304,
+  "density_score": 0.3852,
+  "structure_score": 0.5629,
+  "counter_motif": [
+    72,
+    75,
+    72,
+    73,
+    73,
+    70
+  ],
+  "phrase_structure": [
+    "descent",
+    "repeat",
+    "fall"
+  ],
+  "swing_ratio": 0.077,
+  "song_form": [
+    "A",
+    "B",
+    "B"
+  ]
+}

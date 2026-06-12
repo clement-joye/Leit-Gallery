@@ -1,0 +1,103 @@
+{
+  "seed": "dd28540d39137d0dc6ce78d4a0bf0af5ac370cc8ed023cb6caa66b8a18993ac3",
+  "tempo": 100,
+  "key": "F",
+  "scale": "major",
+  "motif": [
+    65,
+    67,
+    67,
+    70,
+    70,
+    62,
+    62,
+    53,
+    52,
+    53,
+    55,
+    53,
+    53,
+    53
+  ],
+  "chord_progression": [
+    "F",
+    "A#",
+    "Dm",
+    "C"
+  ],
+  "rhythm_pattern": [
+    0.25,
+    0.3333,
+    0.3333,
+    0.3333,
+    2.0,
+    0.5,
+    0.5,
+    0.5,
+    0.25,
+    2.0,
+    0.5,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.3333,
+    0.3333,
+    0.3333,
+    1.0,
+    0.5,
+    0.25,
+    0.5,
+    0.5,
+    0.25,
+    0.5,
+    0.5,
+    1.0,
+    0.25,
+    0.25,
+    0.5,
+    0.25
+  ],
+  "instrumentation": [
+    "guitar",
+    "bass",
+    "organ",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "reggae",
+    "secondary": "jazz",
+    "alternates": [
+      "post_rock",
+      "acoustic",
+      "orchestral"
+    ],
+    "energy": 0.3486,
+    "synthetic_ratio": 0.1677,
+    "groove_complexity": 0.4201,
+    "mix_brightness": 0.237
+  },
+  "tension_score": 0.1906,
+  "density_score": 0.3321,
+  "structure_score": 0.2571,
+  "counter_motif": [
+    72,
+    69,
+    67,
+    70,
+    70
+  ],
+  "phrase_structure": [
+    "wave",
+    "fall",
+    "fall"
+  ],
+  "swing_ratio": 0.0664,
+  "song_form": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

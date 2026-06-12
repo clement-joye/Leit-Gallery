@@ -1,0 +1,42 @@
+---
+interface Props {
+  entry: {
+    slug: string;
+    name: string;
+    repo: string;
+  };
+}
+
+const { entry } = Astro.props;
+
+import { url } from "@/utils/url";
+
+const badgeUrl = url(`/badges/${entry.slug}.svg`);
+const galleryPageUrl = `https://clement-joye.github.io/Leit-Gallery/gallery/${entry.slug}/`;
+const markdownSnippet = `[![Hear ${entry.name}](${galleryPageUrl.replace(`/gallery/${entry.slug}/`, badgeUrl)})](${galleryPageUrl})`;
+const htmlSnippet = `<a href="${galleryPageUrl}"><img src="${galleryPageUrl.replace(`/gallery/${entry.slug}/`, badgeUrl)}" alt="Hear ${entry.name}" /></a>`;
+---
+
+<section class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+  <h2 class="text-sm font-medium uppercase tracking-[0.3em] text-violet-300 mb-4">Embeddable badge</h2>
+  <p class="text-sm text-zinc-400 mb-4">
+    Add this badge to the {entry.name} README to let visitors hear its musical signature.
+  </p>
+
+  <!-- Badge preview -->
+  <div class="rounded-2xl border border-white/10 bg-black/20 p-4 flex items-center justify-center">
+    <img src={badgeUrl} alt={`Hear ${entry.name}`} class="h-6" />
+  </div>
+
+  <!-- Markdown snippet -->
+  <div class="mt-4 space-y-2">
+    <p class="text-xs uppercase tracking-wider text-zinc-500">Markdown</p>
+    <pre class="rounded-xl border border-white/10 bg-black/30 p-3 text-xs text-zinc-300 overflow-x-auto"><code>{markdownSnippet}</code></pre>
+  </div>
+
+  <!-- HTML snippet -->
+  <div class="mt-4 space-y-2">
+    <p class="text-xs uppercase tracking-wider text-zinc-500">HTML</p>
+    <pre class="rounded-xl border border-white/10 bg-black/30 p-3 text-xs text-zinc-300 overflow-x-auto"><code>{htmlSnippet}</code></pre>
+  </div>
+</section>

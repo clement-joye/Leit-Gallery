@@ -1,0 +1,86 @@
+{
+  "seed": "474e5e98d362905fd9ae2c46c4a8f552511148de274c44e728a5a63ebd4e0a5d",
+  "tempo": 102,
+  "key": "D#",
+  "scale": "minor",
+  "motif": [
+    63,
+    68,
+    65,
+    63,
+    68,
+    65,
+    65,
+    63,
+    68,
+    65
+  ],
+  "chord_progression": [
+    "D#m",
+    "B",
+    "F#",
+    "C#"
+  ],
+  "rhythm_pattern": [
+    0.5,
+    1.0,
+    0.25,
+    0.5,
+    0.25,
+    0.5,
+    0.25,
+    0.5,
+    0.5,
+    1.0,
+    2.0,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.5,
+    0.5,
+    0.5,
+    1.5,
+    1.5,
+    0.5,
+    0.5,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.25,
+    1.0
+  ],
+  "instrumentation": [
+    "synth_lead",
+    "synth_bass",
+    "pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "electronic",
+    "secondary": "downtempo",
+    "alternates": [
+      "indietronica",
+      "house",
+      "techno"
+    ],
+    "energy": 0.438,
+    "synthetic_ratio": 0.7888,
+    "groove_complexity": 0.5521,
+    "mix_brightness": 0.4347
+  },
+  "tension_score": 0.5551,
+  "density_score": 0.3444,
+  "structure_score": 0.6234,
+  "counter_motif": [],
+  "phrase_structure": [
+    "descent",
+    "repeat",
+    "repeat"
+  ],
+  "swing_ratio": 0.0689,
+  "song_form": [
+    "A",
+    "B",
+    "B"
+  ]
+}

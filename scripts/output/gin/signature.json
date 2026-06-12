@@ -1,0 +1,89 @@
+{
+  "seed": "56303974251157e55980a82af2390a60c4ba9f58cb714b71c7d5768203bcd1ab",
+  "tempo": 103,
+  "key": "A#",
+  "scale": "major",
+  "motif": [
+    70,
+    67,
+    67,
+    67,
+    67,
+    67,
+    67,
+    63,
+    63,
+    65,
+    63
+  ],
+  "chord_progression": [
+    "A#",
+    "D#",
+    "Gm",
+    "F"
+  ],
+  "rhythm_pattern": [
+    1.5,
+    0.25,
+    1.0,
+    1.5,
+    0.25,
+    1.0,
+    0.5,
+    1.5,
+    0.25,
+    1.0,
+    0.5,
+    0.25,
+    0.5,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "instrumentation": [
+    "electric_piano",
+    "acoustic_bass",
+    "soft_pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "lofi",
+    "secondary": "cinematic",
+    "alternates": [
+      "downtempo",
+      "minimal",
+      "ambient"
+    ],
+    "energy": 0.3202,
+    "synthetic_ratio": 0.4344,
+    "groove_complexity": 0.3888,
+    "mix_brightness": 0.4077
+  },
+  "tension_score": 0.0505,
+  "density_score": 0.3669,
+  "structure_score": 0.4848,
+  "counter_motif": [
+    77,
+    75,
+    77,
+    75,
+    72
+  ],
+  "phrase_structure": [
+    "fall",
+    "fall",
+    "descent"
+  ],
+  "swing_ratio": 0.0734,
+  "song_form": [
+    "A",
+    "B",
+    "C"
+  ]
+}

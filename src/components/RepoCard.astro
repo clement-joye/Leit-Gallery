@@ -1,0 +1,84 @@
+---
+import { url } from "@/utils/url";
+
+interface Props {
+  entry: {
+    slug: string;
+    name: string;
+    repo: string;
+    description: string;
+    language: string;
+    stars: number;
+    genre: string;
+    tempo: number;
+    key: string;
+    logo: string;
+    metrics: {
+      complexity_score: number;
+      maintainability_score: number;
+      coupling_score: number;
+      module_count: number;
+    };
+  };
+  storageBaseUrl: string;
+}
+
+const { entry } = Astro.props;
+
+function formatGenre(genre: string) {
+  return genre.replace(/_/g, " ");
+}
+
+function formatStars(stars: number) {
+  if (stars >= 1000) {
+    return `${(stars / 1000).toFixed(0)}k`;
+  }
+  return stars.toString();
+}
+---
+
+<a
+  href={url(`/gallery/${entry.slug}/`)}
+  class="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-violet-400/30 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-violet-950/20"
+>
+  <div class="flex items-start justify-between">
+    <div class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-black/30 text-lg">
+        ♪
+      </div>
+      <div>
+        <h3 class="text-base font-semibold text-white group-hover:text-violet-200 transition">{entry.name}</h3>
+        <p class="text-xs text-zinc-500">{entry.repo}</p>
+      </div>
+    </div>
+    <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-violet-300">
+      {formatGenre(entry.genre)}
+    </span>
+  </div>
+
+  <p class="mt-4 text-sm text-zinc-400 line-clamp-2">{entry.description}</p>
+
+  <div class="mt-5 grid grid-cols-3 gap-3">
+    <div class="rounded-xl border border-white/5 bg-black/20 px-3 py-2 text-center">
+      <p class="text-[10px] uppercase tracking-wider text-zinc-500">Tempo</p>
+      <p class="text-sm font-medium text-white">{entry.tempo}</p>
+    </div>
+    <div class="rounded-xl border border-white/5 bg-black/20 px-3 py-2 text-center">
+      <p class="text-[10px] uppercase tracking-wider text-zinc-500">Key</p>
+      <p class="text-sm font-medium text-white">{entry.key}</p>
+    </div>
+    <div class="rounded-xl border border-white/5 bg-black/20 px-3 py-2 text-center">
+      <p class="text-[10px] uppercase tracking-wider text-zinc-500">Stars</p>
+      <p class="text-sm font-medium text-white">{formatStars(entry.stars)}</p>
+    </div>
+  </div>
+
+  <div class="mt-4 flex items-center justify-between">
+    <span class="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-[10px] font-medium text-zinc-400">
+      {entry.language}
+    </span>
+    <span class="text-xs text-violet-400 opacity-0 transition group-hover:opacity-100">
+      Listen →
+    </span>
+  </div>
+</a>

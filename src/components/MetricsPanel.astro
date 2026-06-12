@@ -1,0 +1,78 @@
+---
+interface Props {
+  entry: {
+    metrics: {
+      complexity_score: number;
+      maintainability_score: number;
+      coupling_score: number;
+      module_count: number;
+    };
+  };
+}
+
+const { entry } = Astro.props;
+
+function formatScore(score: number) {
+  return (score * 100).toFixed(0) + "%";
+}
+
+function scoreColor(score: number, inverted = false) {
+  const value = inverted ? 1 - score : score;
+  if (value >= 0.7) return "text-emerald-300";
+  if (value >= 0.4) return "text-amber-300";
+  return "text-rose-300";
+}
+---
+
+<section class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+  <h2 class="text-sm font-medium uppercase tracking-[0.3em] text-violet-300 mb-6">Repository metrics</h2>
+
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+      <p class="text-xs uppercase tracking-wider text-zinc-500">Complexity</p>
+      <p class={`mt-2 text-2xl font-semibold ${scoreColor(entry.metrics.complexity_score, true)}`}>
+        {formatScore(entry.metrics.complexity_score)}
+      </p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-white/10">
+        <div
+          class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-rose-400"
+          style={`width: ${entry.metrics.complexity_score * 100}%`}
+        />
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+      <p class="text-xs uppercase tracking-wider text-zinc-500">Maintainability</p>
+      <p class={`mt-2 text-2xl font-semibold ${scoreColor(entry.metrics.maintainability_score)}`}>
+        {formatScore(entry.metrics.maintainability_score)}
+      </p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-white/10">
+        <div
+          class="h-full rounded-full bg-gradient-to-r from-rose-400 to-emerald-400"
+          style={`width: ${entry.metrics.maintainability_score * 100}%`}
+        />
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+      <p class="text-xs uppercase tracking-wider text-zinc-500">Coupling</p>
+      <p class={`mt-2 text-2xl font-semibold ${scoreColor(entry.metrics.coupling_score, true)}`}>
+        {formatScore(entry.metrics.coupling_score)}
+      </p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-white/10">
+        <div
+          class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-rose-400"
+          style={`width: ${entry.metrics.coupling_score * 100}%`}
+        />
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+      <p class="text-xs uppercase tracking-wider text-zinc-500">Modules</p>
+      <p class="mt-2 text-2xl font-semibold text-white">
+        {entry.metrics.module_count.toLocaleString()}
+      </p>
+      <p class="mt-2 text-xs text-zinc-500">analyzed</p>
+    </div>
+  </div>
+</section>

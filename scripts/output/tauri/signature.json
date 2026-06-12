@@ -1,0 +1,91 @@
+{
+  "seed": "5dd73bf1d2a1fafa662d30cb757dfd772774fdd1a500e87420b71aae6d507d9a",
+  "tempo": 107,
+  "key": "F",
+  "scale": "major",
+  "motif": [
+    65,
+    64,
+    70,
+    70,
+    76,
+    72,
+    72,
+    74,
+    79,
+    81,
+    77
+  ],
+  "chord_progression": [
+    "F",
+    "C",
+    "Dm",
+    "A#"
+  ],
+  "rhythm_pattern": [
+    2.0,
+    0.0,
+    0.25,
+    0.5,
+    2.0,
+    0.5,
+    0.5,
+    0.25,
+    2.0,
+    0.5,
+    0.5,
+    0.25,
+    0.0,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.5,
+    1.5,
+    0.5,
+    0.0,
+    0.5,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "instrumentation": [
+    "electric_piano",
+    "synth_bass",
+    "soft_pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "downtempo",
+    "secondary": "cinematic",
+    "alternates": [
+      "lofi",
+      "reggae",
+      "post_rock"
+    ],
+    "energy": 0.3673,
+    "synthetic_ratio": 0.4724,
+    "groove_complexity": 0.4207,
+    "mix_brightness": 0.3899
+  },
+  "tension_score": 0.0983,
+  "density_score": 0.4002,
+  "structure_score": 0.5275,
+  "counter_motif": [
+    72,
+    70,
+    72,
+    74,
+    77
+  ],
+  "phrase_structure": [
+    "arch",
+    "ascent",
+    "ascent"
+  ],
+  "swing_ratio": 0.08,
+  "song_form": [
+    "A",
+    "B",
+    "B"
+  ]
+}

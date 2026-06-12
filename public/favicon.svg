@@ -1,0 +1,43 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0f0f0f"/>
+  
+  <!-- Subtle gradient background -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0f0f0f;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="noteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#c084fc"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="64" height="64" fill="url(#bgGradient)"/>
+  
+  <!-- Musical note with waveform elements -->
+  <g transform="translate(32, 32)">
+    <!-- Left waveform arc -->
+    <path d="M -12 -8 Q -10 -12 -8 -8" stroke="#8b5cf6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M -12 0 Q -10 -4 -8 0" stroke="#8b5cf6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M -12 8 Q -10 4 -8 8" stroke="#8b5cf6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Right waveform arc -->
+    <path d="M 8 -8 Q 10 -12 12 -8" stroke="#c084fc" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 8 0 Q 10 -4 12 0" stroke="#c084fc" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 8 8 Q 10 4 12 8" stroke="#c084fc" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Musical note stem -->
+    <rect x="-2" y="-10" width="1.5" height="18" fill="url(#noteGradient)" rx="0.75"/>
+    
+    <!-- Note head (large circle) -->
+    <circle cx="0" cy="8" r="4.5" fill="url(#noteGradient)"/>
+    
+    <!-- Note head (small circle) -->
+    <circle cx="-5" cy="-2" r="3.5" fill="url(#noteGradient)" opacity="0.85"/>
+    
+    <!-- Connecting beam -->
+    <path d="M -0.5 -10 Q -2 -6 -5 -2" stroke="url(#noteGradient)" stroke-width="1" fill="none" opacity="0.7"/>
+  </g>
+</svg>

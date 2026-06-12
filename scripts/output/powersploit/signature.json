@@ -1,0 +1,90 @@
+{
+  "seed": "f609404effd6f6392dd9ec0f9ca9c531d212da4f8ecc044f278b4659943a048a",
+  "tempo": 93,
+  "key": "E",
+  "scale": "major",
+  "motif": [
+    64,
+    64,
+    64,
+    66,
+    64,
+    64,
+    64,
+    66,
+    66,
+    66,
+    66,
+    64
+  ],
+  "chord_progression": [
+    "E",
+    "C#m",
+    "A",
+    "B"
+  ],
+  "rhythm_pattern": [
+    0.0,
+    0.5,
+    1.0,
+    0.25,
+    1.5,
+    0.25,
+    1.0,
+    1.0,
+    1.0,
+    0.25,
+    1.5,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    0.25,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "instrumentation": [
+    "electric_piano",
+    "acoustic_bass",
+    "soft_pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "lofi",
+    "secondary": "acoustic",
+    "alternates": [
+      "cinematic",
+      "neoclassical",
+      "ambient"
+    ],
+    "energy": 0.3049,
+    "synthetic_ratio": 0.2719,
+    "groove_complexity": 0.3049,
+    "mix_brightness": 0.312
+  },
+  "tension_score": 0.0686,
+  "density_score": 0.3299,
+  "structure_score": 0.5523,
+  "counter_motif": [
+    71,
+    68,
+    66,
+    66,
+    66
+  ],
+  "phrase_structure": [
+    "ascent",
+    "repeat",
+    "ascent"
+  ],
+  "swing_ratio": 0.066,
+  "song_form": [
+    "A",
+    "B",
+    "B"
+  ]
+}

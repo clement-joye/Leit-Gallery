@@ -1,0 +1,83 @@
+{
+  "repo_url": "https://github.com/axios/axios",
+  "commit_sha": "2d06f96e8602c2db13b65a26340ee4a1bbc0b61f",
+  "language_summary": {
+    "JavaScript": 200,
+    "TypeScript": 23
+  },
+  "identity": {
+    "fingerprint_hash": "6146a180fa6d189d89d7e2cd46ad7a971486cde36afabdf961a0ef0ea31e5083",
+    "token_distribution": {
+      "identifier": 0.839789,
+      "kw:function": 0.136971,
+      "kw:import": 0.021797,
+      "kw:class": 0.001443
+    },
+    "ast_distribution": {
+      "javascript:function": 0.921811,
+      "typescript:function": 0.067764,
+      "javascript:class": 0.009328,
+      "typescript:class": 0.001097
+    },
+    "naming_profile": {
+      "snake": 0.7125,
+      "camel": 0.1998,
+      "other": 0.009,
+      "pascal": 0.0686,
+      "screaming_snake": 0.0101
+    },
+    "folder_shape": {
+      "0": 7,
+      "1": 7,
+      "2": 97,
+      "3": 43,
+      "4": 59,
+      "5": 10
+    }
+  },
+  "architecture": {
+    "module_count": 224,
+    "dependency_edges": 317,
+    "coupling_score": 0.1769,
+    "cycle_count": 0,
+    "graph_density": 0.0063,
+    "centrality_variance": 0.0003,
+    "cluster_count": 46,
+    "hub_modules": [
+      "lib.utils",
+      "lib.axios",
+      "lib.core.AxiosError",
+      "index",
+      "lib.core.AxiosHeaders",
+      "lib.platform.index",
+      "lib.cancel.CanceledError",
+      "lib.adapters.http",
+      "lib.defaults.index",
+      "lib.helpers.toFormData",
+      "lib.helpers.resolveConfig",
+      "lib.core.mergeConfig",
+      "lib.core.settle",
+      "lib.env.data",
+      "lib.adapters.adapters",
+      "lib.core.buildFullPath",
+      "lib.helpers.progressEventReducer",
+      "lib.helpers.buildURL",
+      "lib.helpers.sanitizeHeaderValue",
+      "lib.defaults.transitional",
+      "tests.setup.server",
+      "lib.helpers.AxiosURLSearchParams",
+      "lib.core.transformData"
+    ]
+  },
+  "quality": {
+    "complexity_score": 0.3469921495276552,
+    "maintainability_score": 0.5768106507786275,
+    "duplication_score": 0.5855683946429202,
+    "test_ratio": 0.6188340807174888,
+    "avg_file_length": 161.1,
+    "avg_function_length": 19.4,
+    "comment_ratio": 0.021966701932178853,
+    "nesting_depth_score": 0.7685247834990178,
+    "annotation_ratio": 0.07623318385650224
+  }
+}

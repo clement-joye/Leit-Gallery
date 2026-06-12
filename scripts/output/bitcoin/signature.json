@@ -1,0 +1,98 @@
+{
+  "seed": "7a8c0f99991f2b5d240acb020458f68ba0910aa0c621584c2052f96f059d4733",
+  "tempo": 103,
+  "key": "G",
+  "scale": "phrygian",
+  "motif": [
+    67,
+    65,
+    63,
+    60,
+    67,
+    65,
+    63,
+    60,
+    60,
+    58,
+    58,
+    58,
+    56,
+    53
+  ],
+  "chord_progression": [
+    "Gm",
+    "G#",
+    "F",
+    "Gm"
+  ],
+  "rhythm_pattern": [
+    0.5,
+    0.25,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.5,
+    1.0,
+    0.5,
+    1.0,
+    0.25,
+    0.5,
+    0.5,
+    0.25,
+    0.5,
+    0.5,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.0,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.25,
+    1.0,
+    0.5,
+    0.5
+  ],
+  "instrumentation": [
+    "guitar",
+    "bass",
+    "organ",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "funk",
+    "secondary": "metal",
+    "alternates": [
+      "rock",
+      "post_rock",
+      "jazz"
+    ],
+    "energy": 0.6355,
+    "synthetic_ratio": 0.2645,
+    "groove_complexity": 0.763,
+    "mix_brightness": 0.4039
+  },
+  "tension_score": 0.7762,
+  "density_score": 0.3996,
+  "structure_score": 0.6248,
+  "counter_motif": [
+    74,
+    75,
+    75,
+    72,
+    72,
+    69
+  ],
+  "phrase_structure": [
+    "descent",
+    "repeat",
+    "descent"
+  ],
+  "swing_ratio": 0.0799,
+  "song_form": [
+    "A",
+    "B",
+    "C"
+  ]
+}

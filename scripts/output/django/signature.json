@@ -1,0 +1,91 @@
+{
+  "seed": "2257fe9000cc4361a19ae30ac870c49d2c2202b5ec300b235547c9bcc0479868",
+  "tempo": 115,
+  "key": "F",
+  "scale": "minor",
+  "motif": [
+    65,
+    63,
+    63,
+    63,
+    63,
+    58,
+    61,
+    63,
+    63,
+    63,
+    63,
+    58,
+    61,
+    63
+  ],
+  "chord_progression": [
+    "Fm",
+    "A#m",
+    "D#",
+    "G#"
+  ],
+  "rhythm_pattern": [
+    0.25,
+    0.25,
+    0.25,
+    0.5,
+    0.25,
+    0.5,
+    1.5,
+    1.5,
+    0.5,
+    1.5,
+    1.5,
+    0.25,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.25,
+    0.5,
+    0.25,
+    0.25,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.25,
+    1.0,
+    0.5,
+    2.0,
+    0.25
+  ],
+  "instrumentation": [
+    "piano",
+    "acoustic_bass",
+    "strings",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "jazz",
+    "secondary": "post_rock",
+    "alternates": [
+      "reggae",
+      "funk",
+      "rock"
+    ],
+    "energy": 0.5645,
+    "synthetic_ratio": 0.1209,
+    "groove_complexity": 0.6334,
+    "mix_brightness": 0.2774
+  },
+  "tension_score": 0.6948,
+  "density_score": 0.4432,
+  "structure_score": 0.1934,
+  "counter_motif": [],
+  "phrase_structure": [
+    "descent",
+    "wave",
+    "repeat"
+  ],
+  "swing_ratio": 0.0886,
+  "song_form": [
+    "A",
+    "B",
+    "C"
+  ]
+}

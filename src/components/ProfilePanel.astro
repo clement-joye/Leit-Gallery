@@ -1,0 +1,165 @@
+---
+interface QualityMetrics {
+  annotation_ratio: number;
+  avg_file_length: number;
+  avg_function_length: number;
+  comment_ratio: number;
+  complexity_score: number;
+  duplication_score: number;
+  maintainability_score: number;
+  nesting_depth_score: number;
+  test_ratio: number;
+}
+
+interface ArchitectureMetrics {
+  centrality_variance: number;
+  cluster_count: number;
+  coupling_score: number;
+  cycle_count: number;
+  dependency_edges: number;
+  graph_density: number;
+  hub_modules: string[];
+  module_count: number;
+}
+
+interface Props {
+  profile: {
+    architecture: ArchitectureMetrics;
+    identity: {
+      fingerprint_hash: string;
+      folder_shape?: string;
+      naming_profile?: Record<string, unknown>;
+      token_distribution?: Record<string, number>;
+      ast_distribution?: Record<string, number>;
+    };
+    language_summary: Record<string, number> | string[];
+    quality: QualityMetrics;
+    repo_url: string;
+  };
+}
+
+const { profile } = Astro.props;
+
+function pct(v: number) {
+  return (v * 100).toFixed(1) + "%";
+}
+
+function scoreColor(score: number, inverted = false) {
+  const value = inverted ? 1 - score : score;
+  if (value >= 0.7) return "text-emerald-300";
+  if (value >= 0.4) return "text-amber-300";
+  return "text-rose-300";
+}
+
+const topHubs = profile.architecture.hub_modules.slice(0, 5);
+
+const languages = Array.isArray(profile.language_summary)
+  ? profile.language_summary
+  : Object.keys(profile.language_summary);
+
+const qualityRows = [
+  { label: "Comment ratio", value: profile.quality.comment_ratio, bar: true, good: true },
+  { label: "Test ratio", value: profile.quality.test_ratio, bar: true, good: true },
+  { label: "Duplication", value: profile.quality.duplication_score, bar: true, good: false },
+  { label: "Nesting depth", value: profile.quality.nesting_depth_score, bar: true, good: false },
+  { label: "Annotation ratio", value: profile.quality.annotation_ratio, bar: true, good: true },
+];
+---
+
+<section class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+  <h2 class="text-sm font-medium uppercase tracking-[0.3em] text-violet-300 mb-6">Code profile</h2>
+
+  <div class="grid gap-6 sm:grid-cols-2">
+
+    <!-- Quality metrics -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Quality indicators</p>
+      <div class="space-y-3">
+        {qualityRows.map(({ label, value, bar, good }) => (
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-zinc-400">{label}</span>
+              <span class={scoreColor(value, !good)}>{pct(value)}</span>
+            </div>
+            {bar && (
+              <div class="h-1.5 w-full rounded-full bg-white/10">
+                <div
+                  class={`h-full rounded-full ${good ? "bg-gradient-to-r from-rose-400 to-emerald-400" : "bg-gradient-to-r from-emerald-400 to-rose-400"}`}
+                  style={`width: ${Math.min(value * 100, 100)}%`}
+                />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+      <div class="mt-4 grid grid-cols-2 gap-2">
+        <div class="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-center">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Avg fn length</p>
+          <p class="mt-1 text-sm font-semibold text-white">{profile.quality.avg_function_length.toFixed(0)} <span class="text-xs font-normal text-zinc-500">lines</span></p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-center">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Avg file length</p>
+          <p class="mt-1 text-sm font-semibold text-white">{profile.quality.avg_file_length.toFixed(0)} <span class="text-xs font-normal text-zinc-500">lines</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Architecture stats -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Architecture</p>
+      <div class="grid grid-cols-2 gap-2 mb-4">
+        <div class="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-center">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Clusters</p>
+          <p class="mt-1 text-sm font-semibold text-white">{profile.architecture.cluster_count.toLocaleString()}</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-center">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Dep edges</p>
+          <p class="mt-1 text-sm font-semibold text-white">{profile.architecture.dependency_edges.toLocaleString()}</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-center">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Cycles</p>
+          <p class={`mt-1 text-sm font-semibold ${profile.architecture.cycle_count === 0 ? "text-emerald-300" : "text-amber-300"}`}>
+            {profile.architecture.cycle_count}
+          </p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-center">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Graph density</p>
+          <p class="mt-1 text-sm font-semibold text-white">{profile.architecture.graph_density.toFixed(4)}</p>
+        </div>
+      </div>
+
+      <!-- Hub modules -->
+      {topHubs.length > 0 && (
+        <div>
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500 mb-2">Top hub modules</p>
+          <ul class="space-y-1">
+            {topHubs.map((mod) => (
+              <li class="truncate font-mono text-xs text-zinc-400" title={mod}>
+                {mod}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+
+    <!-- Languages -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Languages detected</p>
+      <div class="flex flex-wrap gap-2">
+        {languages.map((lang) => (
+          <span class="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-zinc-300">
+            {lang}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Fingerprint -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-1">Code fingerprint</p>
+      <p class="font-mono text-xs text-zinc-500 break-all">{profile.identity.fingerprint_hash}</p>
+    </div>
+
+  </div>
+</section>

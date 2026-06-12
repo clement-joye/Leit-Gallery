@@ -1,0 +1,78 @@
+{
+  "seed": "bb49974be56848dd5000f6a7d63b8e5496f3db0853366294832d0547f65a324e",
+  "tempo": 99,
+  "key": "C#",
+  "scale": "major",
+  "motif": [
+    61,
+    58,
+    68,
+    61,
+    58,
+    68,
+    68,
+    68,
+    72
+  ],
+  "chord_progression": [
+    "C#",
+    "G#",
+    "A#m",
+    "F#"
+  ],
+  "rhythm_pattern": [
+    0.5,
+    0.5,
+    1.5,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.25,
+    1.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.25,
+    0.5,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "instrumentation": [
+    "synth_lead",
+    "synth_bass",
+    "soft_pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "chillwave",
+    "secondary": "downtempo",
+    "alternates": [
+      "minimal",
+      "cinematic",
+      "indietronica"
+    ],
+    "energy": 0.3245,
+    "synthetic_ratio": 0.8061,
+    "groove_complexity": 0.2655,
+    "mix_brightness": 0.5214
+  },
+  "tension_score": 0.0885,
+  "density_score": 0.347,
+  "structure_score": 0.5768,
+  "counter_motif": [],
+  "phrase_structure": [
+    "ascent",
+    "repeat",
+    "arch"
+  ],
+  "swing_ratio": 0.0694,
+  "song_form": [
+    "A",
+    "B",
+    "B"
+  ]
+}

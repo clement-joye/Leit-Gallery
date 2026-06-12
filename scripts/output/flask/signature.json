@@ -1,0 +1,95 @@
+{
+  "seed": "e2893e628d9572ebef266da4353778df1d9894d5546c1a886d81cfdf787bb440",
+  "tempo": 102,
+  "key": "C#",
+  "scale": "minor",
+  "motif": [
+    61,
+    59,
+    59,
+    57,
+    57,
+    57,
+    54,
+    59,
+    59,
+    57,
+    57,
+    54,
+    49,
+    49
+  ],
+  "chord_progression": [
+    "C#m",
+    "A",
+    "E",
+    "B"
+  ],
+  "rhythm_pattern": [
+    0.25,
+    0.5,
+    0.25,
+    1.5,
+    1.0,
+    1.0,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.5,
+    1.5,
+    1.5,
+    0.3333,
+    0.3333,
+    0.3333,
+    1.0,
+    0.5,
+    0.5,
+    0.25,
+    1.0,
+    2.0,
+    0.5,
+    0.25
+  ],
+  "instrumentation": [
+    "piano",
+    "acoustic_bass",
+    "strings",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "jazz",
+    "secondary": "reggae",
+    "alternates": [
+      "post_rock",
+      "orchestral",
+      "rock"
+    ],
+    "energy": 0.4932,
+    "synthetic_ratio": 0.1302,
+    "groove_complexity": 0.5522,
+    "mix_brightness": 0.3268
+  },
+  "tension_score": 0.6503,
+  "density_score": 0.4739,
+  "structure_score": 0.3142,
+  "counter_motif": [
+    68,
+    66,
+    68,
+    69,
+    69,
+    66,
+    63
+  ],
+  "phrase_structure": [
+    "descent",
+    "descent",
+    "descent"
+  ],
+  "swing_ratio": 0.0948,
+  "song_form": [
+    "A",
+    "B",
+    "C"
+  ]
+}

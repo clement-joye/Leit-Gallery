@@ -1,0 +1,61 @@
+{
+  "repo_url": "https://github.com/PowerShellMafia/PowerSploit",
+  "commit_sha": "d943001a7defb5e0d1657085a77a0e78609be58f",
+  "language_summary": {
+    "C": 29,
+    "C++": 22
+  },
+  "identity": {
+    "fingerprint_hash": "b8b36cc83c879b6a2697a6d790966ab0a83e5da5fdc21b3c7855647273ec24c9",
+    "token_distribution": {
+      "identifier": 0.915688,
+      "kw:function": 0.049334,
+      "kw:import": 0.02793,
+      "kw:class": 0.007048
+    },
+    "ast_distribution": {
+      "c:function": 0.768519,
+      "c:class": 0.12037,
+      "cpp:function": 0.106481,
+      "cpp:class": 0.00463
+    },
+    "naming_profile": {
+      "screaming_snake": 0.1802,
+      "snake": 0.3475,
+      "pascal": 0.2568,
+      "camel": 0.1784,
+      "other": 0.0371
+    },
+    "folder_shape": {
+      "3": 19,
+      "4": 32
+    }
+  },
+  "architecture": {
+    "module_count": 41,
+    "dependency_edges": 45,
+    "coupling_score": 0.1372,
+    "cycle_count": 0,
+    "graph_density": 0.0274,
+    "centrality_variance": 0.0,
+    "cluster_count": 12,
+    "hub_modules": [
+      "Exfiltration.NTFSParser.NTFSParserDLL.stdafx",
+      "Exfiltration.NTFSParser.NTFSParserDLL.targetver",
+      "Exfiltration.NTFSParser.NTFSParserDLL.NTFS_DataType",
+      "Exfiltration.NTFSParser.NTFSParserDLL.NTFS_Common",
+      "Exfiltration.NTFSParser.NTFSParserDLL.NTFS_FileRecord"
+    ]
+  },
+  "quality": {
+    "complexity_score": 0.32985884927947834,
+    "maintainability_score": 0.552314131689915,
+    "duplication_score": 0.7110938410724694,
+    "test_ratio": 0.0,
+    "avg_file_length": 156.5,
+    "avg_function_length": 31.2,
+    "comment_ratio": 0.13979706877113868,
+    "nesting_depth_score": 0.7685247834990178,
+    "annotation_ratio": 0.43137254901960786
+  }
+}

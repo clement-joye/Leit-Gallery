@@ -1,0 +1,50 @@
+---
+import Base from "@/layouts/Base.astro";
+import RepoCard from "@/components/RepoCard.astro";
+import galleryData from "@/data/gallery.json";
+
+const entries = galleryData.entries;
+---
+
+<Base title="Leit Gallery — Hear Famous Repositories">
+  <main class="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 py-10 sm:px-8 lg:px-10">
+    <!-- Hero -->
+    <section class="space-y-6 text-center">
+      <div class="inline-flex rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.3em] text-violet-200">
+        Public showcase
+      </div>
+      <h1 class="mx-auto max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        Listen to the world's most famous repositories.
+      </h1>
+      <p class="mx-auto max-w-2xl text-base text-zinc-400 sm:text-lg">
+        Leit analyzes repository metrics to generate a code profile, a musical signature, and a WAV render for each project.
+        That output can then be used as input for Gemini or another generative AI model to create a unique track that fits the repository identity.
+        Built with <a href="https://github.com/clement-joye/Leit" class="text-violet-400 hover:text-violet-300 transition">Leit</a>.
+      </p>
+    </section>
+
+    <!-- Grid -->
+    <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {entries.map((entry) => (
+        <RepoCard entry={entry} storageBaseUrl={galleryData.storage_base_url} />
+      ))}
+    </section>
+
+    <!-- CTA -->
+    <section class="rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur">
+      <h2 class="text-2xl font-semibold text-white">Generate your own</h2>
+      <p class="mt-3 text-sm text-zinc-400">
+        Leit is open source. Clone the repo, point it at any GitHub repository, and generate its profile, signature, and WAV render from code metrics.
+        You can then feed that result into Gemini or another generative AI music tool for a more interpretive version.
+      </p>
+      <a
+        href="https://github.com/clement-joye/Leit"
+        target="_blank"
+        rel="noopener"
+        class="mt-6 inline-block rounded-2xl bg-violet-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-violet-400"
+      >
+        Get Leit on GitHub →
+      </a>
+    </section>
+  </main>
+</Base>

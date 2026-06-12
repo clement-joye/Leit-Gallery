@@ -1,0 +1,167 @@
+---
+interface GenreProfile {
+  primary: string;
+  secondary: string;
+  energy: number;
+  groove_complexity: number;
+  mix_brightness: number;
+  synthetic_ratio: number;
+  alternates?: string[];
+}
+
+interface Props {
+  signature: {
+    chord_progression: string[];
+    counter_motif: number[];
+    density_score: number;
+    genre_profile: GenreProfile;
+    instrumentation: string[];
+    key: string;
+    motif: number[];
+    phrase_structure: string[];
+    rhythm_pattern: number[];
+    scale: string;
+    seed: string;
+    song_form: string[];
+    structure_score: number;
+    swing_ratio: number;
+    tempo: number;
+    tension_score: number;
+  };
+}
+
+const { signature } = Astro.props;
+
+function formatLabel(s: string) {
+  return s.replace(/_/g, " ");
+}
+
+function pct(v: number) {
+  return (v * 100).toFixed(0) + "%";
+}
+
+const barMetrics = [
+  { label: "Energy", value: signature.genre_profile.energy },
+  { label: "Groove complexity", value: signature.genre_profile.groove_complexity },
+  { label: "Mix brightness", value: signature.genre_profile.mix_brightness },
+  { label: "Synthetic ratio", value: signature.genre_profile.synthetic_ratio },
+  { label: "Density", value: signature.density_score },
+  { label: "Structure", value: signature.structure_score },
+  { label: "Tension", value: signature.tension_score },
+  { label: "Swing", value: signature.swing_ratio },
+];
+---
+
+<section class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+  <h2 class="text-sm font-medium uppercase tracking-[0.3em] text-violet-300 mb-6">Musical signature</h2>
+
+  <div class="grid gap-6 sm:grid-cols-2">
+
+    <!-- Chord progression -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Chord progression</p>
+      <div class="flex flex-wrap gap-2">
+        {signature.chord_progression.map((chord) => (
+          <span class="rounded-xl border border-violet-400/25 bg-violet-500/10 px-3 py-1.5 text-sm font-semibold text-violet-200">
+            {chord}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Instrumentation -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Instrumentation</p>
+      <div class="flex flex-wrap gap-2">
+        {signature.instrumentation.map((inst) => (
+          <span class="rounded-xl border border-white/10 bg-black/20 px-3 py-1.5 text-sm text-zinc-300 capitalize">
+            {formatLabel(inst)}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Song structure -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Song form</p>
+      <div class="flex flex-wrap items-center gap-1">
+        {signature.song_form.map((section, i) => (
+          <>
+            <span class="rounded-lg border border-white/10 bg-black/30 px-3 py-1.5 text-sm font-mono font-semibold text-zinc-200">
+              {section}
+            </span>
+            {i < signature.song_form.length - 1 && (
+              <span class="text-zinc-600">→</span>
+            )}
+          </>
+        ))}
+      </div>
+      <div class="mt-2 flex flex-wrap gap-2">
+        {signature.phrase_structure.map((phrase) => (
+          <span class="text-xs text-zinc-500 capitalize">{phrase}</span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Key & scale -->
+    <div>
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Tonality</p>
+      <div class="flex gap-3">
+        <div class="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-center flex-1">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Key</p>
+          <p class="mt-1 text-lg font-semibold text-white">{signature.key}</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-center flex-1">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">Scale</p>
+          <p class="mt-1 text-lg font-semibold text-white capitalize">{signature.scale}</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-center flex-1">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-500">BPM</p>
+          <p class="mt-1 text-lg font-semibold text-white">{signature.tempo}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar metrics — full width -->
+    <div class="sm:col-span-2">
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Signature characteristics</p>
+      <div class="grid gap-3 sm:grid-cols-2">
+        {barMetrics.map(({ label, value }) => (
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-zinc-400">{label}</span>
+              <span class="text-zinc-500">{pct(value)}</span>
+            </div>
+            <div class="h-1.5 w-full rounded-full bg-white/10">
+              <div
+                class="h-full rounded-full bg-gradient-to-r from-violet-500 to-violet-300"
+                style={`width: ${Math.min(value * 100, 100)}%`}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Genre alternates -->
+    {signature.genre_profile.alternates && signature.genre_profile.alternates.length > 0 && (
+      <div class="sm:col-span-2">
+        <p class="text-xs uppercase tracking-wider text-zinc-500 mb-3">Genre alternates</p>
+        <div class="flex flex-wrap gap-2">
+          {signature.genre_profile.alternates.map((g) => (
+            <span class="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-zinc-400 capitalize">
+              {formatLabel(g)}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Seed hash -->
+    <div class="sm:col-span-2">
+      <p class="text-xs uppercase tracking-wider text-zinc-500 mb-1">Signature seed</p>
+      <p class="font-mono text-xs text-zinc-500 break-all">{signature.seed}</p>
+    </div>
+
+  </div>
+</section>

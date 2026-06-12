@@ -1,0 +1,87 @@
+{
+  "seed": "889690bc0f835febcbbc3592c8de579d4786a24145f188d28a55fb7692cd6627",
+  "tempo": 96,
+  "key": "B",
+  "scale": "major",
+  "motif": [
+    71,
+    68,
+    66,
+    66,
+    66,
+    70,
+    70,
+    70,
+    78
+  ],
+  "chord_progression": [
+    "B",
+    "G#m",
+    "E",
+    "F#"
+  ],
+  "rhythm_pattern": [
+    0.5,
+    0.5,
+    2.0,
+    1.0,
+    1.5,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.3333,
+    0.3333,
+    1.0,
+    1.0,
+    0.5,
+    0.25,
+    1.0,
+    0.0,
+    1.0,
+    0.5,
+    2.0,
+    0.5,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "instrumentation": [
+    "synth_lead",
+    "synth_bass",
+    "soft_pad",
+    "drums"
+  ],
+  "genre_profile": {
+    "primary": "chillwave",
+    "secondary": "synthwave",
+    "alternates": [
+      "indietronica",
+      "downtempo",
+      "electronic"
+    ],
+    "energy": 0.3351,
+    "synthetic_ratio": 0.8515,
+    "groove_complexity": 0.4042,
+    "mix_brightness": 0.5211
+  },
+  "tension_score": 0.1389,
+  "density_score": 0.3239,
+  "structure_score": 0.547,
+  "counter_motif": [
+    78,
+    80,
+    82,
+    80
+  ],
+  "phrase_structure": [
+    "wave",
+    "arch",
+    "ascent"
+  ],
+  "swing_ratio": 0.0648,
+  "song_form": [
+    "A",
+    "B",
+    "C"
+  ]
+}

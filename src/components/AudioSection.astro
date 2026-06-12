@@ -1,0 +1,109 @@
+---
+interface Props {
+  entry: {
+    slug: string;
+    name: string;
+    audio: {
+      wav: string;
+      midi: string;
+      gemini?: string;
+      ai_generated?: string;
+    };
+  };
+  storageBase: string;
+}
+
+const { entry, storageBase } = Astro.props;
+
+const wavUrl = `${storageBase}/${entry.audio.wav}`;
+const midiUrl = `${storageBase}/${entry.audio.midi}`;
+const geminiUrl = entry.audio.gemini ? `${storageBase}/${entry.audio.gemini}` : null;
+const aiUrl = entry.audio.ai_generated ? `${storageBase}/${entry.audio.ai_generated}` : null;
+---
+
+<section class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-violet-950/20 backdrop-blur">
+  <div class="mb-6 space-y-2">
+    <p class="text-sm font-medium uppercase tracking-[0.3em] text-violet-300">Audio player</p>
+    <h2 class="text-2xl font-semibold text-white">Repository soundtrack</h2>
+    <p class="text-sm text-zinc-400">
+      Listen to the deterministic musical signature, download the MIDI, or hear the Gemini-composed version built from the same repository profile.
+    </p>
+  </div>
+
+  <div class="space-y-4">
+    <!-- FluidSynth-rendered WAV -->
+    <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-3">Deterministic render (FluidSynth)</p>
+      <audio controls preload="metadata" class="w-full">
+        <source src={wavUrl} type="audio/wav" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Gemini-composed MP3 -->
+    {geminiUrl && (
+      <div class="rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4">
+        <div class="flex items-center gap-2 mb-3">
+          <p class="text-xs uppercase tracking-[0.25em] text-violet-300">Gemini-composed version</p>
+          <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-violet-400">AI</span>
+        </div>
+        <audio controls preload="metadata" class="w-full">
+          <source src={geminiUrl} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <p class="mt-2 text-xs text-zinc-500">
+          Composed by Gemini from the repository's profile and musical signature. Not deterministic — provided for inspiration.
+        </p>
+      </div>
+    )}
+
+    {aiUrl && (
+      <div class="rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4">
+        <p class="text-xs uppercase tracking-[0.25em] text-violet-300 mb-3">AI-generated version</p>
+        <audio controls preload="metadata" class="w-full">
+          <source src={aiUrl} type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+        <p class="mt-2 text-xs text-zinc-500">
+          Generated from the same musical signature using an AI music model. Not deterministic — provided for comparison.
+        </p>
+      </div>
+    )}
+
+    <!-- Download links -->
+    <div class="flex flex-wrap gap-3">
+      <a
+        href={wavUrl}
+        download
+        class="rounded-2xl border border-white/10 bg-black/30 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:border-violet-300 hover:text-white"
+      >
+        Download WAV
+      </a>
+      <a
+        href={midiUrl}
+        download
+        class="rounded-2xl border border-white/10 bg-black/30 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:border-violet-300 hover:text-white"
+      >
+        Download MIDI
+      </a>
+      {geminiUrl && (
+        <a
+          href={geminiUrl}
+          download
+          class="rounded-2xl border border-violet-400/20 bg-violet-500/10 px-5 py-3 text-sm font-semibold text-violet-100 transition hover:bg-violet-500/20"
+        >
+          Download Gemini MP3
+        </a>
+      )}
+      {aiUrl && (
+        <a
+          href={aiUrl}
+          download
+          class="rounded-2xl border border-violet-400/20 bg-violet-500/10 px-5 py-3 text-sm font-semibold text-violet-100 transition hover:bg-violet-500/20"
+        >
+          Download AI Version
+        </a>
+      )}
+    </div>
+  </div>
+</section>

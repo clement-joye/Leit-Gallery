@@ -1,0 +1,64 @@
+{
+  "repo_url": "https://github.com/gin-gonic/gin",
+  "commit_sha": "d75fcd4c9ab260e5225de590f1f0f8c0e0e12d11",
+  "language_summary": {
+    "Go": 99
+  },
+  "identity": {
+    "fingerprint_hash": "762487b71383817ddc8667671a8dfe53f49fca3fced9e9929a084917d5bed1b0",
+    "token_distribution": {
+      "identifier": 0.841725,
+      "kw:function": 0.102955,
+      "kw:import": 0.043623,
+      "kw:class": 0.011697
+    },
+    "ast_distribution": {
+      "go:function": 0.897979,
+      "go:class": 0.102021
+    },
+    "naming_profile": {
+      "pascal": 0.0798,
+      "snake": 0.7785,
+      "camel": 0.1136,
+      "other": 0.0212,
+      "screaming_snake": 0.0069
+    },
+    "folder_shape": {
+      "0": 40,
+      "1": 49,
+      "2": 10
+    }
+  },
+  "architecture": {
+    "module_count": 99,
+    "dependency_edges": 80,
+    "coupling_score": 0.101,
+    "cycle_count": 0,
+    "graph_density": 0.0082,
+    "centrality_variance": 0.0,
+    "cluster_count": 45,
+    "hub_modules": [
+      "errors",
+      "render.html",
+      "render.json",
+      "internal.bytesconv.bytesconv",
+      "path",
+      "binding.binding",
+      "fs",
+      "render.xml",
+      "render.bson",
+      "render.render"
+    ]
+  },
+  "quality": {
+    "complexity_score": 0.36691963074516754,
+    "maintainability_score": 0.48481111770498875,
+    "duplication_score": 0.4899063354470883,
+    "test_ratio": 0.41414141414141414,
+    "avg_file_length": 242.6,
+    "avg_function_length": 11.2,
+    "comment_ratio": 0.08344437041972019,
+    "nesting_depth_score": 0.8320183851339245,
+    "annotation_ratio": 0.9696969696969697
+  }
+}

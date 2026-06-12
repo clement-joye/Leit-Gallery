@@ -1,0 +1,430 @@
+{
+  "storage_base_url": "https://saleitgallery.blob.core.windows.net/gallery",
+  "entries": [
+    {
+      "slug": "agentmemory",
+      "name": "AgentMemory",
+      "repo": "rohitg00/agentmemory",
+      "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+      "language": "TypeScript",
+      "stars": 22477,
+      "commit_sha": "f6f9e3cb1385da31f48036868dc3c7fe342b67ba",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "chillwave",
+      "tempo": 95,
+      "key": "D# major",
+      "audio": {
+        "wav": "agentmemory/signature.wav",
+        "midi": "agentmemory/signature.mid",
+        "gemini": "agentmemory/gemini.mp3"
+      },
+      "logo": "/images/agentmemory.svg",
+      "metrics": {
+        "complexity_score": 0.38,
+        "maintainability_score": 0.47,
+        "coupling_score": 0.0096,
+        "module_count": 403
+      }
+    },
+    {
+      "slug": "astro",
+      "name": "Astro",
+      "repo": "withastro/astro",
+      "description": "The web framework for content-driven websites. \u2b50\ufe0f Star to support our work!",
+      "language": "TypeScript",
+      "stars": 60084,
+      "commit_sha": "37197652630ffbc11efaaec1865869410b8dfd70",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "chillwave",
+      "tempo": 96,
+      "key": "B major",
+      "audio": {
+        "wav": "astro/signature.wav",
+        "midi": "astro/signature.mid",
+        "gemini": "astro/gemini.mp3"
+      },
+      "logo": "/images/astro.svg",
+      "metrics": {
+        "complexity_score": 0.32,
+        "maintainability_score": 0.55,
+        "coupling_score": 0.0778,
+        "module_count": 2855
+      }
+    },
+    {
+      "slug": "axios",
+      "name": "Axios",
+      "repo": "axios/axios",
+      "description": "Promise based HTTP client for the browser and node.js",
+      "language": "JavaScript",
+      "stars": 109075,
+      "commit_sha": "2d06f96e8602c2db13b65a26340ee4a1bbc0b61f",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "chillwave",
+      "tempo": 99,
+      "key": "C# major",
+      "audio": {
+        "wav": "axios/signature.wav",
+        "midi": "axios/signature.mid",
+        "gemini": "axios/gemini.mp3"
+      },
+      "logo": "/images/axios.svg",
+      "metrics": {
+        "complexity_score": 0.35,
+        "maintainability_score": 0.58,
+        "coupling_score": 0.1769,
+        "module_count": 224
+      }
+    },
+    {
+      "slug": "bitcoin",
+      "name": "Bitcoin Core",
+      "repo": "bitcoin/bitcoin",
+      "description": "Bitcoin Core integration/staging tree",
+      "language": "C++",
+      "stars": 89376,
+      "commit_sha": "4c99ed10766c7fac1353d1402d1b99de4c656c08",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "funk",
+      "tempo": 103,
+      "key": "G phrygian",
+      "audio": {
+        "wav": "bitcoin/signature.wav",
+        "midi": "bitcoin/signature.mid",
+        "gemini": "bitcoin/gemini.mp3"
+      },
+      "logo": "/images/bitcoin.svg",
+      "metrics": {
+        "complexity_score": 0.4,
+        "maintainability_score": 0.62,
+        "coupling_score": 0.7524,
+        "module_count": 1688
+      }
+    },
+    {
+      "slug": "curl",
+      "name": "curl",
+      "repo": "curl/curl",
+      "description": "A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, MQTTS, POP3, POP3S, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET, TFTP, WS and WSS. libcurl offers a myriad of powerful features",
+      "language": "C",
+      "stars": 42109,
+      "commit_sha": "fb2441294eed2b6dc9ac0445f8925244aa1635e4",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "funk",
+      "tempo": 97,
+      "key": "A dorian",
+      "audio": {
+        "wav": "curl/signature.wav",
+        "midi": "curl/signature.mid",
+        "gemini": "curl/gemini.mp3"
+      },
+      "logo": "/images/curl.svg",
+      "metrics": {
+        "complexity_score": 0.42,
+        "maintainability_score": 0.58,
+        "coupling_score": 0.392,
+        "module_count": 870
+      }
+    },
+    {
+      "slug": "django",
+      "name": "Django",
+      "repo": "django/django",
+      "description": "The Web framework for perfectionists with deadlines.",
+      "language": "Python",
+      "stars": 87836,
+      "commit_sha": "f1440a752ec034277ccdad914995c3f164308e41",
+      "generated_at": "2026-06-12T21:01:25Z",
+      "genre": "jazz",
+      "tempo": 115,
+      "key": "F minor",
+      "audio": {
+        "wav": "django/signature.wav",
+        "midi": "django/signature.mid",
+        "gemini": "django/gemini.mp3"
+      },
+      "logo": "/images/django.svg",
+      "metrics": {
+        "complexity_score": 0.44,
+        "maintainability_score": 0.19,
+        "coupling_score": 0.3896,
+        "module_count": 3035
+      }
+    },
+    {
+      "slug": "fastapi",
+      "name": "Fastapi",
+      "repo": "fastapi/fastapi",
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "language": "Python",
+      "stars": 99149,
+      "commit_sha": "d3e6a2931f95dcb044c09cbfc39e4b0e9e620fd4",
+      "generated_at": "2026-06-12T21:01:25Z",
+      "genre": "reggae",
+      "tempo": 100,
+      "key": "F major",
+      "audio": {
+        "wav": "fastapi/signature.wav",
+        "midi": "fastapi/signature.mid",
+        "gemini": "fastapi/gemini.mp3"
+      },
+      "logo": "/images/fastapi.svg",
+      "metrics": {
+        "complexity_score": 0.33,
+        "maintainability_score": 0.26,
+        "coupling_score": 0.1813,
+        "module_count": 1130
+      }
+    },
+    {
+      "slug": "flask",
+      "name": "Flask",
+      "repo": "pallets/flask",
+      "description": "The Python micro framework for building web applications.",
+      "language": "Python",
+      "stars": 71640,
+      "commit_sha": "36e4a824f340fdee7ed50937ba8e7f6bc7d17f81",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "jazz",
+      "tempo": 102,
+      "key": "C# minor",
+      "audio": {
+        "wav": "flask/signature.wav",
+        "midi": "flask/signature.mid",
+        "gemini": "flask/gemini.mp3"
+      },
+      "logo": "/images/flask.svg",
+      "metrics": {
+        "complexity_score": 0.47,
+        "maintainability_score": 0.31,
+        "coupling_score": 0.3006,
+        "module_count": 84
+      }
+    },
+    {
+      "slug": "gin",
+      "name": "Gin",
+      "repo": "gin-gonic/gin",
+      "description": "Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance\u2014up to 40 times faster\u2014thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.",
+      "language": "Go",
+      "stars": 88672,
+      "commit_sha": "d75fcd4c9ab260e5225de590f1f0f8c0e0e12d11",
+      "generated_at": "2026-06-12T21:01:25Z",
+      "genre": "lofi",
+      "tempo": 103,
+      "key": "A# major",
+      "audio": {
+        "wav": "gin/signature.wav",
+        "midi": "gin/signature.mid",
+        "gemini": "gin/gemini.mp3"
+      },
+      "logo": "/images/gin.svg",
+      "metrics": {
+        "complexity_score": 0.37,
+        "maintainability_score": 0.48,
+        "coupling_score": 0.101,
+        "module_count": 99
+      }
+    },
+    {
+      "slug": "next-js",
+      "name": "Next-Js",
+      "repo": "vercel/next.js",
+      "description": "The React Framework",
+      "language": "TypeScript",
+      "stars": 139957,
+      "commit_sha": "a64db6f77f4cb2c5e618d01b0c76c5a694ec9dac",
+      "generated_at": "2026-06-12T21:01:25Z",
+      "genre": "electronic",
+      "tempo": 102,
+      "key": "E minor",
+      "audio": {
+        "wav": "next-js/signature.wav",
+        "midi": "next-js/signature.mid",
+        "gemini": "next-js/gemini.mp3"
+      },
+      "logo": "/images/next-js.svg",
+      "metrics": {
+        "complexity_score": 0.31,
+        "maintainability_score": 0.62,
+        "coupling_score": 0.1077,
+        "module_count": 22762
+      }
+    },
+    {
+      "slug": "openclaw",
+      "name": "OpenClaw",
+      "repo": "openclaw/openclaw",
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. \ud83e\udd9e ",
+      "language": "TypeScript",
+      "stars": 378321,
+      "commit_sha": "1bd04ac98389925c29550fb377c7b57cf60017b1",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "chillwave",
+      "tempo": 96,
+      "key": "C# major",
+      "audio": {
+        "wav": "openclaw/signature.wav",
+        "midi": "openclaw/signature.mid",
+        "gemini": "openclaw/gemini.mp3"
+      },
+      "logo": "/images/openclaw.svg",
+      "metrics": {
+        "complexity_score": 0.35,
+        "maintainability_score": 0.56,
+        "coupling_score": 0.0483,
+        "module_count": 17725
+      }
+    },
+    {
+      "slug": "pytorch",
+      "name": "Pytorch",
+      "repo": "pytorch/pytorch",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "language": "Python",
+      "stars": 100699,
+      "commit_sha": "022ae6616f676c8527b9b10ab20f85b824324923",
+      "generated_at": "2026-06-12T21:01:25Z",
+      "genre": "metal",
+      "tempo": 107,
+      "key": "F harmonic_minor",
+      "audio": {
+        "wav": "pytorch/signature.wav",
+        "midi": "pytorch/signature.mid",
+        "gemini": "pytorch/gemini.mp3"
+      },
+      "logo": "/images/pytorch.svg",
+      "metrics": {
+        "complexity_score": 0.45,
+        "maintainability_score": 0.54,
+        "coupling_score": 0.7587,
+        "module_count": 8361
+      }
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "repo": "facebook/react",
+      "description": "The library for web and native user interfaces.",
+      "language": "JavaScript",
+      "stars": 245785,
+      "commit_sha": "900ae094d85b11c67d53dd14af50a2bda5db4495",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "chillwave",
+      "tempo": 102,
+      "key": "G major",
+      "audio": {
+        "wav": "react/signature.wav",
+        "midi": "react/signature.mid",
+        "gemini": "react/gemini.mp3"
+      },
+      "logo": "/images/react.svg",
+      "metrics": {
+        "complexity_score": 0.34,
+        "maintainability_score": 0.61,
+        "coupling_score": 0.0002,
+        "module_count": 4387
+      }
+    },
+    {
+      "slug": "react-native",
+      "name": "React Native",
+      "repo": "react/react-native",
+      "description": "A framework for building native applications using React",
+      "language": "JavaScript",
+      "stars": 125990,
+      "commit_sha": "d8f71837f8db1b9bdd3be7c7df0d5b5c476e4bac",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "downtempo",
+      "tempo": 96,
+      "key": "G# minor",
+      "audio": {
+        "wav": "react-native/signature.wav",
+        "midi": "react-native/signature.mid",
+        "gemini": "react-native/gemini.mp3"
+      },
+      "logo": "/images/react-native.svg",
+      "metrics": {
+        "complexity_score": 0.33,
+        "maintainability_score": 0.57,
+        "coupling_score": 0.2817,
+        "module_count": 4734
+      }
+    },
+    {
+      "slug": "redis",
+      "name": "Redis",
+      "repo": "redis/redis",
+      "description": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server, and document and vector query engine.",
+      "language": "C",
+      "stars": 74839,
+      "commit_sha": "f6ffa0003a257da819bc245e94b96e193d622c1d",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "reggae",
+      "tempo": 106,
+      "key": "F mixolydian",
+      "audio": {
+        "wav": "redis/signature.wav",
+        "midi": "redis/signature.mid",
+        "gemini": "redis/gemini.mp3"
+      },
+      "logo": "/images/redis.svg",
+      "metrics": {
+        "complexity_score": 0.42,
+        "maintainability_score": 0.56,
+        "coupling_score": 0.2945,
+        "module_count": 758
+      }
+    },
+    {
+      "slug": "tauri",
+      "name": "Tauri",
+      "repo": "tauri-apps/tauri",
+      "description": "Build smaller, faster, and more secure desktop and mobile applications with a web frontend.",
+      "language": "Rust",
+      "stars": 107781,
+      "commit_sha": "4222dd11758e34ebe68ce44f52c919ea0c69e8f5",
+      "generated_at": "2026-06-12T11:56:18Z",
+      "genre": "downtempo",
+      "tempo": 107,
+      "key": "F major",
+      "audio": {
+        "wav": "tauri/signature.wav",
+        "midi": "tauri/signature.mid",
+        "gemini": "tauri/gemini.mp3"
+      },
+      "logo": "/images/tauri.svg",
+      "metrics": {
+        "complexity_score": 0.4,
+        "maintainability_score": 0.53,
+        "coupling_score": 0.0967,
+        "module_count": 468
+      }
+    },
+    {
+      "slug": "vscode",
+      "name": "Vscode",
+      "repo": "microsoft/vscode",
+      "description": "Visual Studio Code",
+      "language": "TypeScript",
+      "stars": 186214,
+      "commit_sha": "56414283d5f69c2d60399d767156b4d47ee50d81",
+      "generated_at": "2026-06-12T21:01:25Z",
+      "genre": "techno",
+      "tempo": 102,
+      "key": "F minor",
+      "audio": {
+        "wav": "vscode/signature.wav",
+        "midi": "vscode/signature.mid",
+        "gemini": "vscode/gemini.mp3"
+      },
+      "logo": "/images/vscode.svg",
+      "metrics": {
+        "complexity_score": 0.39,
+        "maintainability_score": 0.56,
+        "coupling_score": 0.2609,
+        "module_count": 11679
+      }
+    }
+  ]
+}
